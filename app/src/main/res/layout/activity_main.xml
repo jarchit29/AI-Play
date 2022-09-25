@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentRelLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D3F7FB"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_margin="10dp"
+        android:id="@+id/tcodersLogo"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:src="@drawable/tcoderslogo1"
+        />
+
+    <RelativeLayout
+        android:layout_below="@+id/tcodersLogo"
+        android:id="@+id/upper"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="15dp"
+        >
+
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/songName"
+            android:layout_below="@+id/logo"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:textStyle="italic|bold"
+            android:textAllCaps="false"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/black"
+            android:singleLine="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:ellipsize="marquee"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lower"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/upper"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+
+        >
+
+        <ImageView
+            android:id="@+id/previousBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/previous"
+            android:layout_marginRight="30dp"
+
+            />
+
+        <ImageView
+            android:id="@+id/playPauseBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/play"
+            android:layout_toEndOf="@+id/previousBtn"
+            android:layout_marginRight="30dp"
+
+            />
+
+        <ImageView
+            android:id="@+id/nextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/next"
+            android:layout_toEndOf="@+id/playPauseBtn"
+            />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/voiceEnableBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"
+        android:text="Voice Enabled Mode - ON"
+        android:background="@color/purple_200"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textAllCaps="false"
+        />
+
+</RelativeLayout>
